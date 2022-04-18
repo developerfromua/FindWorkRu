@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="?android:attr/actionModeWebSearchDrawable"
+        android:title="Поиск" />
+
+    <item
+        android:id="@+id/navigation_favourite"
+        android:icon="@android:drawable/btn_star"
+        android:title="Избранное" />
+
+    <item
+        android:id="@+id/navigation_resumes"
+        android:icon="@drawable/ic_user_avatar"
+        android:title="Мои резюме" />
+
+</menu>

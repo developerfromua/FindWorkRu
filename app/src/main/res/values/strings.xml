@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">FindWorkRu</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <array name="categories">
+        <item>Не выбрано</item>
+        <item>Программирование</item>
+        <item>Управление персоналом</item>
+        <item>Управление персоналом</item>
+        <item>Образование, наука</item>
+        <item>Металлургия</item>
+        <item>Медицина</item>
+        <item>Транспорт и логика</item>
+        <item>Охрана труда</item>
+        <item>Транспорт</item>
+        <item>Юриспруденция</item>
+        <item>Машиностроение</item>
+        <item>Услуги населению</item>
+    </array>
+    <array name="cities">
+        <item>Не выбрано</item>
+        <item>Москва</item>
+        <item>Краснодар</item>
+        <item>Омск</item>
+        <item>Ростов-на-Дону</item>
+        <item>Москва</item>
+        <item>Ярославь</item>
+        <item>Тула</item>
+        <item>Белгород</item>
+        <item>Таганрог</item>
+    </array>
+    <array name="work_exp">
+        <item>Не выбрано</item>
+        <item>Без опыта</item>
+        <item>1 - 3 года</item>
+        <item>3 - 5 лет</item>
+        <item>Более 5 лет</item>
+        <item>Любой</item>
+    </array>
+    <array name="business">
+        <item>Не выбрано</item>
+        <item>Полная занятость</item>
+        <item>Частичная занятость</item>
+        <item>Проектная работа</item>
+        <item>Волонтерство</item>
+        <item>Стажировка</item>
+    </array>
+    <array name="schedule">
+        <item>Не выбрано</item>
+        <item>Полный рабочий день</item>
+        <item>Сменный график</item>
+        <item>Гибкий график</item>
+        <item>Удаленная работа</item>
+        <item>Вахтовый метод</item>
+    </array>
+    <string name="title_activity_edit_resume">EditResumeActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string-array name="add_resume_business">
+        <item>не выбрано</item>
+        <item>Полная</item>
+        <item>Частичная</item>
+        <item>Проектная</item>
+        <item>Стажировка</item>
+        <item>Волонтерство</item>
+    </string-array>
+    <string-array name="add_resume_schedule">
+        <item>не выбрано</item>
+        <item>Полный день</item>
+        <item>Сменный график</item>
+        <item>Гибкий график</item>
+        <item>Удаленная работа</item>
+        <item>Вахтовый метод</item>
+    </string-array>
+    <string-array name="add_resume_sex">
+        <item>не выбрано</item>
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
+    <string-array name="add_resume_education">
+        <item>не выбрано</item>
+        <item>Среднее</item>
+        <item>Среднее неполное</item>
+        <item>Среднее специальное</item>
+        <item>Высшее</item>
+        <item>Высшее неполное</item>
+    </string-array>
+    <string-array name="add_resume_education_form">
+        <item>не выбрано</item>
+        <item>Очная</item>
+        <item>Очно-заочная</item>
+        <item>Заочная</item>
+        <item>Дистанционная</item>
+    </string-array>
+</resources>

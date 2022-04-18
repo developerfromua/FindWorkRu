@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_search">
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.rsoftware.findworkru.ui.search.SearchFragment"
+        android:label="Поиск"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_favourite2"
+            app:destination="@id/navigation_favourite" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favourite"
+        android:name="com.rsoftware.findworkru.ui.favourite.FavouriteFragment"
+        android:label="Избранное"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_navigation_favourite_to_navigation_resumes"
+            app:destination="@id/navigation_resumes" />
+        <action
+            android:id="@+id/action_navigation_favourite_to_navigation_search3"
+            app:destination="@id/navigation_search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_resumes"
+        android:name="com.rsoftware.findworkru.ui.resumes.ResumesFragment"
+        android:label="Мои резюме"
+        tools:layout="@layout/fragment_resumes" >
+        <action
+            android:id="@+id/action_navigation_resumes_to_navigation_favourite"
+            app:destination="@id/navigation_favourite" />
+    </fragment>
+</navigation>
