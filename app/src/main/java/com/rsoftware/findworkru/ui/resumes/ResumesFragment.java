@@ -7,11 +7,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,6 +34,7 @@ public class ResumesFragment extends Fragment {
     private ResumesViewModel resumesViewModel;
     private FragmentResumesBinding binding;
     private RecyclerView recyclerView;
+    private TextView textViewResumeEmpty;
     private ResumesAdapter adapter;
     private ResumesPresenter presenter;
     private ExtendedFloatingActionButton button;
@@ -46,13 +49,22 @@ public class ResumesFragment extends Fragment {
         View root = binding.getRoot();
         recyclerView = root.findViewById(R.id.recyclerViewResumes);
         button = root.findViewById(R.id.addResumeButton);
+        textViewResumeEmpty = root.findViewById(R.id.textViewResumeEmpty);
         recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
         adapter = new ResumesAdapter();
         adapter.setResumeList(new ArrayList<Resume>());
         recyclerView.setAdapter(adapter);
         presenter = new ResumesPresenter();
         List<Resume> resumeList = presenter.LoadData(root.getContext());
-        adapter.setResumeList(resumeList);
+        if (!resumeList.isEmpty()) {
+            adapter.setResumeList(resumeList);
+            textViewResumeEmpty.setVisibility(View.INVISIBLE);
+        }
+        else {
+            adapter.setResumeList(resumeList);
+            textViewResumeEmpty.setVisibility(View.VISIBLE);
+        }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,7 +110,15 @@ public class ResumesFragment extends Fragment {
         Log.i("DEBUG_TAG", "RESULT CODE: " + resultCode);
         if (resultCode == Activity.RESULT_OK) {
             List<Resume> resumeList = presenter.LoadData(getContext());
-            adapter.setResumeList(resumeList);
+            if (!resumeList.isEmpty()) {
+                adapter.setResumeList(resumeList);
+                textViewResumeEmpty.setVisibility(View.INVISIBLE);
+            }
+            else {
+                adapter.setResumeList(resumeList);
+                textViewResumeEmpty.setVisibility(View.VISIBLE);
+            }
+
         }
     }
 

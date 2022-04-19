@@ -79,8 +79,13 @@ public class ResumesAdapter extends RecyclerView.Adapter<ResumesAdapter.ResumesV
             String resumeSkills = resume.getResumeSkills();
             String date = resume.getDate();
 
+            if (wantedVacancy.isEmpty()){
+                textViewResumeTitle.setText("без названия");
+            }
+            else {
+                textViewResumeTitle.setText(wantedVacancy);
+            }
 
-            textViewResumeTitle.setText(wantedVacancy);
             textViewResumeDate.setText(date);
             imageViewResumeDel.setOnClickListener(new View.OnClickListener() {
                 @Override
