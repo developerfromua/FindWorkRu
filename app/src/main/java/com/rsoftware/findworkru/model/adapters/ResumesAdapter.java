@@ -1,10 +1,8 @@
-package com.rsoftware.findworkru.model;
+package com.rsoftware.findworkru.model.adapters;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,18 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rsoftware.findworkru.R;
+import com.rsoftware.findworkru.model.database.Database;
+import com.rsoftware.findworkru.model.database.Resume;
 
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class ResumesAdapter extends RecyclerView.Adapter<ResumesAdapter.ResumesViewHolder> {
     private List<Resume> resumeList;
     private Database database;
     private OnItemClickListener listener;
+    private OnClickListener listenerSend;
 
     public interface OnItemClickListener {
         void onItemClick(int pos, int uid, String name, String surname, String middle_name, String wanted_vacancy, String wanted_salary, String business, String schedule, String phone, String email, String city, String citizenship, String sex, String education, String work_exp, String educationInstitution, String factuality, String educationSpeciality, String yearEndingEducation, String educationForm, String resumeSkills, String date);
+    }
+    public interface OnClickListener {
+        void onClick(String name, String surname, String middle_name, String wanted_vacancy, String wanted_salary, String business, String schedule, String phone, String email, String city, String citizenship, String sex, String education, String work_exp, String educationInstitution, String factuality, String educationSpeciality, String yearEndingEducation, String educationForm, String resumeSkills);
     }
 
     @NonNull
@@ -47,12 +49,14 @@ public class ResumesAdapter extends RecyclerView.Adapter<ResumesAdapter.ResumesV
         private TextView textViewResumeTitle;
         private TextView textViewResumeDate;
         private ImageView imageViewResumeDel;
+        private ImageView imageViewSendResume;
 
         public ResumesViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewResumeTitle = itemView.findViewById(R.id.textViewResumeTitle);
             textViewResumeDate = itemView.findViewById(R.id.textViewResumeDate);
             imageViewResumeDel = itemView.findViewById(R.id.imageViewResumeDel);
+            imageViewSendResume = itemView.findViewById(R.id.imageViewSendResume);
         }
 
         public void bind(Resume resume) {
@@ -96,6 +100,12 @@ public class ResumesAdapter extends RecyclerView.Adapter<ResumesAdapter.ResumesV
                     notifyDataSetChanged();
                 }
             });
+            imageViewSendResume.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                   listenerSend.onClick(name, surname, middle_name, wantedVacancy, wantedSalary, business, schedule, phone, email, city, citizenship, sex, education, workExp, educationInstitution, factuality, educationSpeciality,yearEndingEducation, educationForm, resumeSkills);
+                }
+            });
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -114,5 +124,9 @@ public class ResumesAdapter extends RecyclerView.Adapter<ResumesAdapter.ResumesV
 
     public void setListener(OnItemClickListener listener) {
         this.listener = listener;
+    }
+
+    public void setListenerSend(OnClickListener listenerSend) {
+        this.listenerSend = listenerSend;
     }
 }

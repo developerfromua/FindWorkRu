@@ -1,4 +1,4 @@
-package com.rsoftware.findworkru.model;
+package com.rsoftware.findworkru.model.database;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

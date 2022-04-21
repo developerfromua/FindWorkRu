@@ -6,8 +6,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.rsoftware.findworkru.model.Database;
-import com.rsoftware.findworkru.model.FavouriteList;
+import com.rsoftware.findworkru.model.database.Database;
+import com.rsoftware.findworkru.model.database.FavouriteList;
 import com.rsoftware.findworkru.model.Vacancy;
 
 import java.util.List;

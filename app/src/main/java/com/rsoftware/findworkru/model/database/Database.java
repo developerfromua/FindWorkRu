@@ -1,4 +1,4 @@
-package com.rsoftware.findworkru.model;
+package com.rsoftware.findworkru.model.database;
 
 import android.content.Context;
 
@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 @androidx.room.Database(entities = {FavouriteList.class, Resume.class}, version = 1, exportSchema = false)
 public abstract class Database extends RoomDatabase {
     private static Database database;
-    private static final String DB_NAME = "favourite6.db";
+    private static final String DB_NAME = "favourite7.db";
     private static final Object LOCK = new Object();
 
     public static Database getInstance(Context context) {

@@ -1,4 +1,4 @@
-package com.rsoftware.findworkru.model;
+package com.rsoftware.findworkru.model.adapters;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.rsoftware.findworkru.R;
+import com.rsoftware.findworkru.model.database.Database;
+import com.rsoftware.findworkru.model.database.FavouriteList;
 
 import java.util.List;
 

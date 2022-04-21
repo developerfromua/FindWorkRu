@@ -2,20 +2,13 @@ package com.rsoftware.findworkru.ui.search;
 
 import android.util.Log;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.rsoftware.findworkru.model.NetworkUtil.NetworkService;
-import com.rsoftware.findworkru.model.NetworkUtil.VacanciesPojo;
 import com.rsoftware.findworkru.model.Vacancy;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class SearchViewModel extends ViewModel {
 

@@ -22,7 +22,7 @@ import com.rsoftware.findworkru.screens.SearchResultsActivity;
 
 public class SearchFragment extends Fragment {
 
-    private SearchViewModel searchViewModel;
+
     private FragmentSearchBinding binding;
     private SearchView searchView = null;
     private Button buttonSearchVacancies;
@@ -36,8 +36,6 @@ public class SearchFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        searchViewModel =
-                new ViewModelProvider(this).get(SearchViewModel.class);
 
         binding = FragmentSearchBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

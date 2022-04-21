@@ -1,10 +1,11 @@
-package com.rsoftware.findworkru.screens;
+package com.rsoftware.findworkru.presenters;
 
 import android.util.Log;
 
-import com.rsoftware.findworkru.model.NetworkUtil.NetworkService;
-import com.rsoftware.findworkru.model.NetworkUtil.VacanciesPojo;
+import com.rsoftware.findworkru.model.NetworkApiUtil.NetworkService;
+import com.rsoftware.findworkru.model.NetworkApiUtil.VacanciesPojo;
 import com.rsoftware.findworkru.model.Vacancy;
+import com.rsoftware.findworkru.screens.SearchResultsActivity;
 
 import java.util.ArrayList;
 import java.util.List;

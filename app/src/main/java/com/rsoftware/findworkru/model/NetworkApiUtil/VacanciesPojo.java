@@ -1,4 +1,4 @@
-package com.rsoftware.findworkru.model.NetworkUtil;
+package com.rsoftware.findworkru.model.NetworkApiUtil;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

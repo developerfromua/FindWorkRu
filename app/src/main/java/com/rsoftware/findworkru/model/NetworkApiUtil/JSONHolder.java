@@ -1,4 +1,4 @@
-package com.rsoftware.findworkru.model.NetworkUtil;
+package com.rsoftware.findworkru.model.NetworkApiUtil;
 
 import java.util.List;
 

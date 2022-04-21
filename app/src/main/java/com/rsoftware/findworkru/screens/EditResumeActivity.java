@@ -6,14 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.rsoftware.findworkru.R;
-import com.rsoftware.findworkru.model.AddResumePresenter;
-import com.rsoftware.findworkru.model.EditResumePresenter;
-import com.rsoftware.findworkru.model.Resume;
+import com.rsoftware.findworkru.presenters.EditResumePresenter;
+import com.rsoftware.findworkru.model.database.Resume;
 
 public class EditResumeActivity extends AppCompatActivity {
     private EditText editTextEditResumeName;

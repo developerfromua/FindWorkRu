@@ -7,12 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import com.rsoftware.findworkru.R;
-import com.rsoftware.findworkru.model.VacanciesAdapter;
+import com.rsoftware.findworkru.model.adapters.VacanciesAdapter;
 import com.rsoftware.findworkru.model.Vacancy;
+import com.rsoftware.findworkru.presenters.SearchResultsPresenter;
 
 import java.util.ArrayList;
 import java.util.List;

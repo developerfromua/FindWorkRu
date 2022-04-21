@@ -1,4 +1,4 @@
-package com.rsoftware.findworkru.model.NetworkUtil;
+package com.rsoftware.findworkru.model.NetworkApiUtil;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

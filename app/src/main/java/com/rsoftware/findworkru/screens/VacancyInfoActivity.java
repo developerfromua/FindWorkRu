@@ -15,7 +15,6 @@ import com.rsoftware.findworkru.model.Vacancy;
 
 public class VacancyInfoActivity extends AppCompatActivity {
 
-    private VacancyInfoViewModel vacancyInfoViewModel;
     private Vacancy vacancy;
     private TextView textViewVacancyInfoName;
     private TextView textViewVacancyInfoCreatedDate;
@@ -42,9 +41,7 @@ public class VacancyInfoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Описание");
 
-
         Intent intent = getIntent();
-        vacancyInfoViewModel = new ViewModelProvider(this).get(VacancyInfoViewModel.class);
 
         String name = intent.getStringExtra("vacancyName");
         String salary = intent.getStringExtra("vacancySalary");

@@ -2,7 +2,6 @@ package com.rsoftware.findworkru.ui.favourite;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,20 +15,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.rsoftware.findworkru.R;
 import com.rsoftware.findworkru.databinding.FragmentFavouriteBinding;
-import com.rsoftware.findworkru.model.FavouriteAdapter;
-import com.rsoftware.findworkru.model.FavouriteList;
-import com.rsoftware.findworkru.model.FavouritePresenter;
-import com.rsoftware.findworkru.model.VacanciesAdapter;
-import com.rsoftware.findworkru.screens.SearchResultsActivity;
+import com.rsoftware.findworkru.model.adapters.FavouriteAdapter;
+import com.rsoftware.findworkru.model.database.FavouriteList;
+import com.rsoftware.findworkru.presenters.FavouritePresenter;
+import com.rsoftware.findworkru.model.adapters.VacanciesAdapter;
 import com.rsoftware.findworkru.screens.VacancyInfoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class FavouriteFragment extends Fragment {
 
-    private FavouriteViewModel favouriteViewModel;
     private FragmentFavouriteBinding binding;
     private RecyclerView recyclerViewFavourite;
     private TextView textViewFavouriteEmpty;
@@ -38,8 +34,6 @@ public class FavouriteFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        favouriteViewModel =
-                new ViewModelProvider(this).get(FavouriteViewModel.class);
 
         binding = FragmentFavouriteBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

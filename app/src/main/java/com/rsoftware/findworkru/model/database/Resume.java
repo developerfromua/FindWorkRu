@@ -1,4 +1,4 @@
-package com.rsoftware.findworkru.model;
+package com.rsoftware.findworkru.model.database;
 
 import androidx.room.Entity;
 import androidx.room.Ignore;

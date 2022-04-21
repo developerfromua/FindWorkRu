@@ -1,6 +1,9 @@
-package com.rsoftware.findworkru.model;
+package com.rsoftware.findworkru.presenters;
 
 import android.content.Context;
+
+import com.rsoftware.findworkru.model.database.Database;
+import com.rsoftware.findworkru.model.database.Resume;
 
 public class EditResumePresenter {
 

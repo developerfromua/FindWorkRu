@@ -3,14 +3,13 @@ package com.rsoftware.findworkru.screens;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.rsoftware.findworkru.R;
-import com.rsoftware.findworkru.model.AddResumePresenter;
-import com.rsoftware.findworkru.model.Resume;
+import com.rsoftware.findworkru.presenters.AddResumePresenter;
+import com.rsoftware.findworkru.model.database.Resume;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
